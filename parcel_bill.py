@@ -68,8 +68,8 @@ def parcel_bill():
 # Create the main Tkinter window
 root = tkinter.Tk()
 root.title("Parcel Bill")
-root.geometry("300x400")
-root.config(bg="#b9d8e4")
+root.geometry("300x400") 
+root.config(bg="#b9d8e4") #background color using color code 
 
 style = ttk.Style()
 style.theme_use("default")
@@ -78,8 +78,8 @@ style.configure("Pink.TLabel", background="#f6cab7")
 
 parcel_bill_frame = ttk.LabelFrame(root, text="Parcel Bill", style="Pink.TLabelframe")
 title_label = ttk.Label(parcel_bill_frame, text="Parcel Bill")
-parcel_bill_frame.grid(row=0, column=0, padx=20, pady=10, sticky="nsew")  # Added sticky to expand frame
-title_label.grid(row=0, column=0, sticky="nsew")  # Position the label within the frame
+parcel_bill_frame.grid(row=0, column=0, padx=20, pady=10, sticky="nsew")  # expand fill entire grid cell
+title_label.grid(row=0, column=0, sticky="nsew")  
 
 # Spacing and centering elements within the frame
 for widget in parcel_bill_frame.winfo_children():
@@ -106,7 +106,7 @@ weight_entry.grid(row=2, column=1, padx=5, pady=5)
 
 service_type_label = ttk.Label(parcel_bill_frame, text="Service Type:", style="Pink.TLabel")
 service_type_label.grid(row=3, column=0, padx=5, pady=5)
-service_type_var = tkinter.StringVar(value="standard")
+service_type_var = tkinter.StringVar(value="choose service type")
 service_types = ["express", "standard"]
 service_type_combobox = ttk.Combobox(parcel_bill_frame, textvariable=service_type_var, values=service_types)
 service_type_combobox.grid(row=3, column=1, padx=5, pady=5)
